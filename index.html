@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jorge Peralta Budgeting</title>
+  <meta name="description" content="Jorge Peralta Budgeting is a personal budgeting app that uses Plaid to securely connect financial accounts so the account owner can review balances and transactions in one place." />
+  <style>
+    :root {
+      --bg: #f6f7fb;
+      --surface: #ffffff;
+      --text: #14161a;
+      --muted: #5d6470;
+      --border: #e6e8ee;
+      --accent: #b8860b;
+      --accent-dark: #8f6a08;
+      --shadow: 0 18px 50px rgba(15, 23, 42, 0.08);
+      --radius: 20px;
+      --max: 960px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #fbfbfd 0%, var(--bg) 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    a { color: var(--accent-dark); }
+    .wrap { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+    header { padding: 64px 0 28px; }
+    .badge {
+      display: inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(184, 134, 11, 0.12);
+      color: var(--accent-dark);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+    h1 {
+      margin: 18px 0 16px;
+      font-size: clamp(2.2rem, 5vw, 4rem);
+      line-height: 1.02;
+      letter-spacing: -0.04em;
+      max-width: 11ch;
+      text-wrap: balance;
+    }
+    .lead {
+      margin: 0;
+      max-width: 700px;
+      color: var(--muted);
+      font-size: clamp(1rem, 2vw, 1.18rem);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 18px;
+      margin: 34px 0 56px;
+    }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 24px;
+      box-shadow: var(--shadow);
+    }
+    .card h2, .card h3 { margin-top: 0; }
+    .section { margin: 26px 0; }
+    .list {
+      margin: 0;
+      padding-left: 18px;
+    }
+    .subtle {
+      color: var(--muted);
+      font-size: 0.96rem;
+    }
+    nav {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      text-decoration: none;
+      border-radius: 999px;
+      background: var(--text);
+      color: white;
+      font-weight: 700;
+    }
+    .button.secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    footer {
+      padding: 24px 0 56px;
+      color: var(--muted);
+      font-size: 0.94rem;
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .card, .button { transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease; }
+      .card:hover { transform: translateY(-2px); }
+      .button:hover { transform: translateY(-1px); }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <span class="badge">Personal finance app</span>
+      <h1>Jorge Peralta Budgeting</h1>
+      <p class="lead">A personal budgeting app that uses Plaid to securely connect financial accounts so the account owner can view balances and transaction history in one place.</p>
+      <nav>
+        <a class="button" href="privacy.html">Privacy Policy</a>
+        <a class="button secondary" href="terms.html">Terms of Use</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="grid">
+        <article class="card">
+          <h2>What the app does</h2>
+          <p>This app is designed for personal budgeting and account review. It helps the account owner bring account balances and transactions into one dashboard for budgeting and cash-flow visibility.</p>
+        </article>
+        <article class="card">
+          <h2>How data is used</h2>
+          <p>The app uses connected account data only to retrieve balances, account details, and transaction history needed for budgeting and financial review by the authorized user.</p>
+        </article>
+        <article class="card">
+          <h2>Support</h2>
+          <p>If you have a question about this app or your data, contact <a href="mailto:jperalta0789@gmail.com">jperalta0789@gmail.com</a>.</p>
+        </article>
+      </section>
+
+      <section class="card section">
+        <h3>Data access summary</h3>
+        <ul class="list">
+          <li>Balances and basic account information</li>
+          <li>Transaction history used for budgeting and spending review</li>
+          <li>Access only with the user’s authorization through Plaid and the connected institution</li>
+        </ul>
+        <p class="subtle">This site is intended to provide transparency for institutions and users reviewing the app connection.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div>© 2026 Jorge Peralta Budgeting</div>
+    </footer>
+  </div>
+</body>
+</html>
